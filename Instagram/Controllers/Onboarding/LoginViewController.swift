@@ -9,21 +9,82 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    private let usernameField: UITextField = {
+       let usernameField = UITextField()
+       return usernameField
+    }()
+    
+    private let passworField: UITextField = {
+       let passwordField = UITextField()
+        passwordField.isSecureTextEntry = true
+        return passwordField
+       
+    }()
+    
+    private let termsButton: UIButton = {
+        let termsButton = UIButton()
+        return termsButton
+    }()
+    
+    private let privacyButton: UIButton = {
+        let privacyButton = UIButton()
+        return privacyButton
+    }()
+    
+    private let createAccountButton: UIButton = {
+        let createAccountButton = UIButton()
+        return createAccountButton
+    }()
+    private let headerView: UIView = {
+        let headerView = UIView()
+        return headerView
+    }()
+    private let loginButton: UIButton = {
+        let loginButton = UIButton()
+        return loginButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
+        addSubViews()
+        view.backgroundColor = .systemBackground
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        //assign Frames
+        
     }
-    */
+    
+    private func addSubViews(){
+        view.addSubview(usernameField)
+        view.addSubview(passworField)
+        view.addSubview(termsButton)
+        view.addSubview(privacyButton)
+        view.addSubview(headerView)
+        view.addSubview(createAccountButton)
+        view.addSubview(loginButton)
+    }
 
+
+    @objc func didTapPrivacyButton(){
+        
+    }
+    
+    @objc func didTapTermsButton(){
+        
+    }
+    
+    @objc func didTapCreateAccountButton(){
+        
+    }
+    
+    @objc func didTapLoginButton(){
+        
+    }
 }
